@@ -1,0 +1,14 @@
+{{yield}}
+
+<div class="post">
+  <h2 class="post-title">
+    {{#link-to 'post.show' model.id}}
+      {{model.title}}
+    {{/link-to}}
+  </h2>
+
+  <small class="post-date">{{moment-format model.date 'MMMM Do YYYY' 'MM-YYYY-DD'}}</small>
+
+  <div class="partial-desc">{{model.desc}}</div>
+
+</div>

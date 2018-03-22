@@ -1,0 +1,15 @@
+{{#each partialpost as |p|}}
+  <div class="post">
+    <h2 class="post-title">
+      {{#link-to 'post.show' p.id}}
+        {{p.title}}
+      {{/link-to}}
+    </h2>
+
+    <small class="post-date">{{moment-format p.date 'MMMM Do YYYY' 'MM-YYYY-DD'}}</small>
+
+    <div class="partial-desc">{{p.desc}}</div>
+
+    {{#link-to 'post.show' p.id class="post-read-more"}}Read More{{/link-to}}
+  </div>
+{{/each}}
