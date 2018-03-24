@@ -7,7 +7,7 @@ module('Acceptance | post index', function(hooks) {
   setupApplicationTest(hooks);
   setupMirage(hooks);
 
-  test('visiting /', async function(assert) {
+  test('visiting /post', async function(assert) {
     server.createList('post', 3);
     await visit('/post');
     assert.equal(currentURL(), '/post');
