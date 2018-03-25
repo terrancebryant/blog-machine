@@ -1,6 +1,17 @@
-<div class="nav-bar">
+{{!-- <div class="nav-bar">
   {{#link-to 'post.index'}}All Posts{{/link-to}}
   {{#link-to 'post.new'}}Create Post{{/link-to}}
+</div> --}}
+
+<div class="container">
+  <div class="sidebar">
+    <div class="nav">
+      <ul>
+        <li>{{#link-to 'post.new'}}New Post{{/link-to}}</li>
+        <li>{{#link-to 'post'}}All Posts{{/link-to}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="content">{{outlet}}</div>
 </div>
 
-{{outlet}}
